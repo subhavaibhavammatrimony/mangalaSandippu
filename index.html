@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mangala Sandippu — Elite Edition | SubhaVaibhavam</title>
+  <meta name="description" content="Mangala Sandippu Elite Edition — A Premium Matrimonial & Wedding Services Gathering by SubhaVaibhavam. 03 October 2026, Green Meadows Resort, Palavakkam, Chennai." />
+  <meta name="theme-color" content="#6b0f1a" />
+
+  <!-- Open Graph (nice preview when shared on WhatsApp) -->
+  <meta property="og:title" content="Mangala Sandippu — Elite Edition" />
+  <meta property="og:description" content="A Premium Matrimonial & Wedding Services Gathering. 03 Oct 2026, Green Meadows Resort, Chennai." />
+  <meta property="og:image" content="assets/logo.png" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --maroon: #5e0b16;
+      --maroon-2: #7a1220;
+      --maroon-dark: #3d060d;
+      --gold: #b8912f;
+      --gold-2: #d9b451;
+      --gold-light: #f0d891;
+      --champagne: #f7ead0;
+      --cream: #fcf8f1;
+      --cream-2: #f4ead8;
+      --card: #fffdf9;
+      --ink: #2c2024;
+      --muted: #6f6167;
+      --shadow: 0 18px 48px rgba(61, 6, 13, 0.12);
+      --shadow-soft: 0 8px 24px rgba(61, 6, 13, 0.08);
+      --gold-grad: linear-gradient(135deg, #8a6b1f 0%, #d9b451 25%, #f0d891 50%, #d9b451 75%, #8a6b1f 100%);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+      color: var(--ink);
+      background-color: var(--cream);
+      background-image:
+        radial-gradient(circle at 20% 8%, rgba(184, 145, 47, 0.10), transparent 42%),
+        radial-gradient(circle at 82% 92%, rgba(94, 11, 22, 0.08), transparent 45%),
+        radial-gradient(rgba(184, 145, 47, 0.05) 1.2px, transparent 1.2px),
+        radial-gradient(rgba(184, 145, 47, 0.05) 1.2px, transparent 1.2px);
+      background-size: auto, auto, 34px 34px, 34px 34px;
+      background-position: 0 0, 0 0, 0 0, 17px 17px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .serif { font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif; }
+
+    .wrap { width: min(980px, 92%); margin-inline: auto; }
+
+    /* Gold shimmer text */
+    .gold-text {
+      background: var(--gold-grad);
+      background-size: 200% auto;
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
+      animation: shimmer 6s linear infinite;
+    }
+    @keyframes shimmer { to { background-position: 200% center; } }
+
+    /* Ornamental divider with center diamond */
+    .divider {
+      display: flex; align-items: center; justify-content: center;
+      gap: 12px; margin: 20px auto 0; max-width: 220px;
+    }
+    .divider::before, .divider::after {
+      content: ""; height: 1.5px; flex: 1;
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+    .divider::after { background: linear-gradient(90deg, var(--gold), transparent); }
+    .divider span {
+      width: 9px; height: 9px; transform: rotate(45deg);
+      background: var(--gold-grad); box-shadow: 0 0 0 3px rgba(184,145,47,.18);
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative; text-align: center;
+      padding: 64px 0 46px; overflow: hidden;
+      background:
+        radial-gradient(120% 80% at 50% -10%, rgba(94, 11, 22, 0.10), transparent 60%);
+    }
+    .hero .logo {
+      width: clamp(130px, 32vw, 200px); height: auto;
+      filter: drop-shadow(0 12px 26px rgba(61, 6, 13, 0.32));
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif; font-weight: 800;
+      font-size: clamp(2.5rem, 8.5vw, 4.6rem);
+      letter-spacing: 2px; line-height: 1.04; margin-top: 20px;
+    }
+    .hero .edition {
+      font-family: 'Cormorant Garamond', serif; font-weight: 700;
+      color: var(--maroon); letter-spacing: clamp(4px, 2.5vw, 14px);
+      font-size: clamp(1.1rem, 4vw, 1.8rem);
+      text-transform: uppercase; margin-top: 8px;
+      position: relative; display: inline-block; padding: 0 4px;
+    }
+    .hero .tagline {
+      color: var(--muted); font-size: clamp(0.98rem, 3vw, 1.18rem);
+      margin-top: 16px; font-weight: 300; letter-spacing: .3px;
+    }
+
+    /* ---------- Event meta card ---------- */
+    .meta {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 16px; margin: 34px auto 0;
+    }
+    .meta .chip {
+      position: relative; background: var(--card);
+      border-radius: var(--radius); padding: 24px 18px; text-align: center;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid transparent;
+      background-image: linear-gradient(var(--card), var(--card)), var(--gold-grad);
+      background-origin: border-box; background-clip: padding-box, border-box;
+    }
+    .meta .chip .k {
+      font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold); font-weight: 600;
+    }
+    .meta .chip .v {
+      margin-top: 10px; font-weight: 600; color: var(--maroon-dark);
+      font-family: 'Poppins', system-ui, sans-serif; font-size: 1.02rem;
+      line-height: 1.5; letter-spacing: .2px;
+    }
+
+    /* ---------- Sections ---------- */
+    section.block {
+      position: relative; background: var(--card);
+      border-radius: var(--radius); box-shadow: var(--shadow);
+      padding: clamp(26px, 5vw, 48px); margin: 28px auto;
+      border: 1px solid transparent;
+      background-image: linear-gradient(var(--card), var(--card)), var(--gold-grad);
+      background-origin: border-box; background-clip: padding-box, border-box;
+    }
+    section.block h2 {
+      font-family: 'Playfair Display', serif; color: var(--maroon);
+      font-size: clamp(1.6rem, 5vw, 2.3rem); font-weight: 700; letter-spacing: .5px;
+    }
+    section.block h2 + .rule {
+      height: 2px; width: 100%;
+      background: linear-gradient(90deg, var(--gold), rgba(184,145,47,.15), transparent);
+      margin: 14px 0 22px;
+    }
+    .subhead { font-weight: 600; color: var(--ink); margin-bottom: 8px; letter-spacing: .2px; }
+    .lead { color: var(--muted); font-weight: 300; }
+    h3.mini {
+      color: var(--maroon); font-family: 'Cormorant Garamond', serif;
+      font-size: 1.45rem; font-weight: 700; letter-spacing: 1px;
+      margin: 26px 0 12px; text-transform: uppercase;
+      display: flex; align-items: center; gap: 10px;
+    }
+    h3.mini::after { content: ""; flex: 1; height: 1.5px; background: linear-gradient(90deg, rgba(184,145,47,.5), transparent); }
+
+    ul.gold-list { list-style: none; display: grid; gap: 10px; }
+    .cols-2 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    ul.gold-list li { position: relative; padding-left: 28px; color: var(--ink); font-weight: 300; }
+    ul.gold-list li::before {
+      content: "❖"; position: absolute; left: 0; top: 0;
+      color: var(--gold); font-size: .95rem;
+    }
+    ul.gold-list li b { color: var(--maroon); font-weight: 600; }
+
+    /* ---------- Tariffs ---------- */
+    .tariffs { display: grid; gap: 16px; margin-top: 6px; }
+    .tariff {
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 16px; flex-wrap: wrap;
+      border-radius: 16px; padding: 20px 22px;
+      background: linear-gradient(180deg, #fffdf9, #fbf3e3);
+      border: 1px solid transparent;
+      background-image: linear-gradient(180deg, #fffdf9, #fbf3e3), var(--gold-grad);
+      background-origin: border-box; background-clip: padding-box, border-box;
+      box-shadow: var(--shadow-soft);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .tariff:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .tariff .name {
+      font-family: 'Cormorant Garamond', serif; font-weight: 700;
+      color: var(--maroon); font-size: 1.4rem; letter-spacing: .3px;
+    }
+    .tariff .desc { color: var(--muted); font-size: .9rem; display: block; margin-top: 3px; font-weight: 300; }
+    .tariff .price {
+      font-family: 'Playfair Display', serif; font-weight: 700;
+      font-size: 1.5rem; white-space: nowrap;
+    }
+    .note { color: var(--muted); font-size: .85rem; font-style: italic; margin-top: 18px; }
+
+    /* ---------- Payment ---------- */
+    .pay { text-align: center; }
+    .qr-frame {
+      display: inline-block; margin: 20px auto 8px;
+      padding: 16px; border-radius: 22px;
+      background: linear-gradient(135deg, var(--maroon-2), var(--maroon-dark));
+      box-shadow: 0 18px 44px rgba(61, 6, 13, 0.40);
+      border: 2px solid transparent;
+      background-image: linear-gradient(135deg, var(--maroon-2), var(--maroon-dark)), var(--gold-grad);
+      background-origin: border-box; background-clip: padding-box, border-box;
+    }
+    .qr-frame .scan-label {
+      color: var(--gold-light); font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem; letter-spacing: 4px; text-transform: uppercase;
+      font-weight: 700; margin-bottom: 12px;
+    }
+    .qr-frame canvas, .qr-frame img {
+      display: block; width: min(300px, 78vw); height: auto;
+      border-radius: 12px; background: #fff; padding: 10px;
+    }
+    .upi {
+      display: inline-block; margin-top: 16px; padding: 12px 26px;
+      background: #fff; border: 1px dashed var(--gold);
+      border-radius: 40px; font-weight: 600; color: var(--maroon);
+      letter-spacing: .5px;
+    }
+    .pay .hint { color: var(--muted); margin-top: 12px; font-size: .92rem; font-weight: 300; }
+
+    /* ---------- Contact ---------- */
+    .contact { text-align: center; }
+    .contact .phones {
+      font-family: 'Playfair Display', serif; font-weight: 700;
+      color: var(--maroon); font-size: 1.7rem; line-height: 1.5;
+    }
+    .contact .links { margin-top: 16px; display: grid; gap: 10px; font-weight: 300; }
+    .contact a { color: var(--maroon); text-decoration: none; font-weight: 500; }
+    .contact a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center; color: var(--muted); font-size: .82rem;
+      padding: 34px 0 46px;
+    }
+    footer .brand { color: var(--maroon); font-weight: 600; font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; letter-spacing: .5px; }
+
+    @media (max-width: 480px) {
+      .tariff { flex-direction: column; align-items: flex-start; }
+      .tariff .price { align-self: flex-end; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="wrap">
+      <img class="logo" src="assets/logo.png" alt="SubhaVaibhavam — Matrimony Services and Events" />
+      <h1 class="serif gold-text">MANGALA SANDIPPU</h1>
+      <div class="edition">Elite Edition</div>
+      <p class="tagline">A Premium Matrimonial &amp; Wedding Services Gathering</p>
+      <div class="divider"><span></span></div>
+
+      <div class="meta">
+        <div class="chip">
+          <div class="k">Date</div>
+          <div class="v">03 October 2026<br />Saturday</div>
+        </div>
+        <div class="chip">
+          <div class="k">Venue</div>
+          <div class="v">Green Meadows Resort<br />Palavakkam, Chennai</div>
+        </div>
+        <div class="chip">
+          <div class="k">Time</div>
+          <div class="v">9:00 AM – 3:00 PM</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- ===== PARTNER INTRO ===== -->
+    <section class="block" style="text-align:center; border-left:none; border-top:5px solid var(--gold);">
+      <h2 class="serif" style="color:var(--maroon)">Partner With an Exclusive Elite Matrimony Gathering</h2>
+      <div class="divider" style="margin-top:14px"><span></span></div>
+      <p class="lead" style="margin-top:16px">
+        Showcase Your Brand. Connect With Premium Families.<br />Become Part of Their Wedding Journey.
+      </p>
+    </section>
+
+    <!-- ===== EXCLUSIVE GATHERING ===== -->
+    <section class="block">
+      <h2>An Exclusive Gathering</h2>
+      <div class="rule"></div>
+      <p class="subhead">Connect with Premium Families &amp; Relevant Wedding Audiences</p>
+      <p class="lead">
+        Subha Vaibhavam is bringing together carefully selected Doctors, Overseas Professionals,
+        High-Net-Worth Individuals &amp; Families, Business Owners, Entrepreneurs and Premium
+        Professionals for an exclusive matrimonial gathering.
+      </p>
+
+      <h3 class="mini">Expected Profile Categories</h3>
+      <ul class="gold-list">
+        <li><b>Doctors:</b> Bride &amp; Bridegroom</li>
+        <li><b>Overseas Professionals / NRI:</b> Professionals working abroad</li>
+        <li><b>High-Net-Worth Families:</b> Premium families &amp; individuals</li>
+        <li><b>Business Owners &amp; Entrepreneurs:</b> Established business profiles</li>
+        <li><b>Premium Professionals:</b> Established &amp; senior professionals</li>
+      </ul>
+
+      <p class="lead" style="margin-top:18px">
+        Alongside meaningful matrimonial interactions, families will have the opportunity to
+        discover trusted wedding-related products and services all under one roof.
+      </p>
+    </section>
+
+    <!-- ===== CONNECT WITH FAMILIES ===== -->
+    <section class="block">
+      <h2>Connect With Families</h2>
+      <div class="rule"></div>
+      <p class="subhead">A curated platform for relevant wedding brands</p>
+      <p class="lead">
+        Relevant wedding businesses can showcase their products and services directly to premium
+        families who are exploring requirements for their upcoming wedding celebrations.
+      </p>
+
+      <h3 class="mini">Ideal Business Categories</h3>
+      <ul class="gold-list cols-2">
+        <li>Jewellery</li>
+        <li>Wedding Venues &amp; Destination Weddings</li>
+        <li>Silk Sarees &amp; Wedding Wear</li>
+        <li>Wedding Gifts &amp; Return Gifts</li>
+        <li>Bridal Makeup</li>
+        <li>Sweets &amp; Hampers</li>
+        <li>Photography &amp; Videography</li>
+        <li>Seervarisai &amp; Aarthi Plates</li>
+        <li>Wedding Décor &amp; Flower Decoration</li>
+        <li>Iyer &amp; Othuvaar</li>
+        <li>Catering</li>
+        <li>Wedding Planners &amp; Related Services</li>
+      </ul>
+
+      <h3 class="mini">Why Participate?</h3>
+      <ul class="gold-list cols-2">
+        <li>Direct family interaction</li>
+        <li>Premium brand visibility</li>
+        <li>Relevant premium audience</li>
+        <li>Networking opportunities</li>
+        <li>Product &amp; service showcase</li>
+        <li>Long-term customer relationships</li>
+      </ul>
+    </section>
+
+    <!-- ===== SPONSORSHIP TARIFFS ===== -->
+    <section class="block">
+      <h2>Sponsorship &amp; Participation</h2>
+      <div class="rule"></div>
+      <p class="subhead">Choose the visibility package that suits your brand</p>
+
+      <div class="tariffs">
+        <div class="tariff">
+          <div>
+            <span class="name">Event Sponsor</span>
+            <span class="desc">Premium brand visibility across the event</span>
+          </div>
+          <span class="price">₹50,000</span>
+        </div>
+        <div class="tariff">
+          <div>
+            <span class="name">LED Video</span>
+            <span class="desc">Brand video showcase on event LED screen</span>
+          </div>
+          <span class="price">₹25,000</span>
+        </div>
+        <div class="tariff">
+          <div>
+            <span class="name">LED Poster</span>
+            <span class="desc">Brand poster display on event LED screen</span>
+          </div>
+          <span class="price">₹10,000</span>
+        </div>
+        <div class="tariff">
+          <div>
+            <span class="name">Standee</span>
+            <span class="desc">Standee placement at the event</span>
+          </div>
+          <span class="price">₹5,000</span>
+        </div>
+        <div class="tariff">
+          <div>
+            <span class="name">Pamphlet</span>
+            <span class="desc">Pamphlet distribution to attendees</span>
+          </div>
+          <span class="price">₹2,500</span>
+        </div>
+        <div class="tariff">
+          <div>
+            <span class="name">Return Gifts</span>
+            <span class="desc">Sponsors may provide branded return gifts (minimum value ₹1,000 per gift)</span>
+          </div>
+          <span class="price">₹1,000+</span>
+        </div>
+      </div>
+
+      <p class="note">
+        *Limited participation opportunities: Participation benefits are subject to event
+        arrangements and availability.
+      </p>
+    </section>
+
+    <!-- ===== PAYMENT ===== -->
+    <section class="block pay">
+      <h2>Payment Details</h2>
+      <div class="rule"></div>
+      <p class="lead">Scan the QR code below using any UPI app to confirm your sponsorship or stall booking.</p>
+
+      <div class="qr-frame">
+        <div class="scan-label">Scan to Pay</div>
+        <canvas id="upi-qr" aria-label="Scan to Pay — UPI QR code for SubhaVaibhavam"></canvas>
+      </div>
+      <div><span class="upi">UPI ID: subhavaibhavam26@kotak</span></div>
+      <p class="hint">Safe &amp; secure payment · Any UPI app accepted</p>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="block contact">
+      <h2 class="serif" style="color:var(--maroon)">Become Part of Mangala Sandippu – Elite Edition</h2>
+      <div class="divider" style="margin-top:12px"><span></span></div>
+      <p class="lead" style="margin-top:16px">
+        Your brand can become part of a premium gathering where families discover the people,
+        products and services that shape their wedding celebrations.
+      </p>
+
+      <h3 class="mini" style="text-align:center">Sponsorship &amp; Participation Enquiries</h3>
+      <p class="phones">
+        <a href="tel:+917338812870" style="color:inherit;text-decoration:none">73388 12870</a><br />
+        <a href="tel:+918248597009" style="color:inherit;text-decoration:none">82485 97009</a>
+      </p>
+      <div class="links">
+        <div>Instagram: <a href="https://instagram.com/subhavaibhavam.matrimony" target="_blank" rel="noopener">@subhavaibhavam.matrimony</a></div>
+        <div>Email: <a href="mailto:subhavaibhavam2026@gmail.com">subhavaibhavam2026@gmail.com</a></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="brand">SubhaVaibhavam — Matrimony Services and Events</div>
+      Connect to Prosperity · © 2026
+    </div>
+  </footer>
+
+  <!-- Generate the UPI QR live from the UPI ID (no image file needed) -->
+  <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+  <script>
+    (function () {
+      var upiUri = 'upi://pay?pa=subhavaibhavam26@kotak&pn=SubhaVaibhavam&cu=INR&tn=Mangala%20Sandippu%20Sponsorship';
+      function draw() {
+        try {
+          new QRious({ element: document.getElementById('upi-qr'), value: upiUri, size: 300, level: 'H', background: '#ffffff', foreground: '#3d060d' });
+        } catch (e) {
+          var c = document.getElementById('upi-qr');
+          if (c) { c.outerHTML = '<a class="upi" href="' + upiUri + '">Tap here to pay via UPI</a>'; }
+        }
+      }
+      if (window.QRious) { draw(); } else { window.addEventListener('load', draw); }
+    })();
+  </script>
+
+</body>
+</html>
