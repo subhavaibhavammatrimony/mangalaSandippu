@@ -243,6 +243,31 @@
     }
     footer .brand { color: var(--maroon); font-weight: 600; font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; letter-spacing: .5px; }
 
+    /* ---------- Register button ---------- */
+    .btn-register {
+      display: inline-flex; align-items: center; gap: 10px;
+      margin-top: 28px; padding: 16px 40px;
+      font-family: 'Poppins', system-ui, sans-serif;
+      font-weight: 600; font-size: 1.05rem; letter-spacing: .5px;
+      color: #fff8e6; text-decoration: none; cursor: pointer;
+      border: none; border-radius: 44px;
+      background: linear-gradient(135deg, var(--maroon-2), var(--maroon-dark));
+      box-shadow: 0 14px 30px rgba(61, 6, 13, 0.35);
+      position: relative; overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .btn-register::before {
+      content: ""; position: absolute; inset: 0;
+      border-radius: 44px; padding: 2px;
+      background: var(--gold-grad);
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude;
+    }
+    .btn-register:hover { transform: translateY(-3px); box-shadow: 0 20px 42px rgba(61, 6, 13, 0.45); }
+    .btn-register, .contact a.btn-register { color: #fff8e6; }
+    .btn-register:hover { text-decoration: none; }
+    .btn-register .ico { font-size: 1.15rem; }
+
     @media (max-width: 480px) {
       .tariff { flex-direction: column; align-items: flex-start; }
       .tariff .price { align-self: flex-end; }
@@ -259,6 +284,10 @@
       <div class="edition">Elite Edition</div>
       <p class="tagline">A Premium Matrimonial &amp; Wedding Services Gathering</p>
       <div class="divider"><span></span></div>
+
+      <a class="btn-register" href="https://forms.gle/YOUR_FORM_ID" target="_blank" rel="noopener">
+        <span class="ico">✦</span> Register Now
+      </a>
 
       <div class="meta">
         <div class="chip">
@@ -420,6 +449,10 @@
       </div>
       <div><span class="upi">UPI ID: subhavaibhavam26@kotak</span></div>
       <p class="hint">Safe &amp; secure payment · Any UPI app accepted</p>
+
+      <a class="btn-register" href="https://forms.gle/YOUR_FORM_ID" target="_blank" rel="noopener">
+        <span class="ico">✦</span> Register Now
+      </a>
     </section>
 
     <!-- ===== CONTACT ===== -->
